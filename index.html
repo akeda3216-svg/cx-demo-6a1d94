@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>カフェ コクシネル｜宝塚・中山観音の3世代カフェ</title>
+<meta name="description" content="宝塚市・阪急中山観音駅すぐの3世代で集うカフェ、カフェ コクシネル。本格洋食、極上アサイー、選べる8種のおばんざい。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Fredoka:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--red:#d93a35;--red2:#b82a28;--cream:#fff6e6;--ink:#3b2a24;--sub:#7b6258;--yellow:#ffd25a;--demo:38px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Yu Gothic",Meiryo,sans-serif;font-weight:500;font-size:16px;line-height:1.8;letter-spacing:.03em;overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.demo{background:var(--ink);color:#fff;font-size:12px;line-height:1.6;text-align:center;padding:8px 12px;min-height:var(--demo)}
+
+/* 赤いギンガムチェックのテーブルクロス */
+.hero{position:relative;overflow:hidden;min-height:calc(100svh - var(--demo));display:grid;place-items:center;padding:24px 14px;
+  background:
+   linear-gradient(90deg,rgba(255,255,255,.55) 50%,transparent 50%) 0 0/72px 72px,
+   linear-gradient(0deg,rgba(255,255,255,.55) 50%,transparent 50%) 0 0/72px 72px,
+   var(--red);animation:slide 40s linear infinite}
+@keyframes slide{to{background-position:72px 72px,72px 72px,0 0}}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,transparent 38%,rgba(90,10,10,.38) 100%)}
+
+/* お皿（カード） */
+.plate{position:relative;z-index:3;width:min(980px,100%);background:var(--cream);border-radius:46px;box-shadow:0 0 0 10px #fff,0 0 0 14px rgba(255,255,255,.35),0 30px 60px rgba(70,10,10,.4);padding:clamp(20px,4vw,48px);display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(18px,3vw,40px);align-items:center}
+.logo{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.logo .lb{width:54px;height:54px;flex:none}
+.logo b{font-family:"Fredoka","Zen Maru Gothic",sans-serif;font-weight:600;font-size:clamp(30px,4.4vw,52px);line-height:1;letter-spacing:.01em;color:var(--red);display:block}
+.logo small{display:block;font-size:12px;letter-spacing:.2em;color:var(--sub);margin-top:4px;font-weight:700}
+h1{font-weight:900;font-size:clamp(20px,2.7vw,32px);line-height:1.55;letter-spacing:.05em;margin:6px 0 10px}
+h1 span{display:inline-block}
+h1 .em{background:linear-gradient(transparent 62%,var(--yellow) 62%);padding:0 2px}
+.anim h1 .ch{display:inline-block;animation:pop .6s cubic-bezier(.3,1.6,.5,1) both;animation-delay:calc(.5s + var(--n)*45ms)}
+@keyframes pop{from{opacity:0;transform:translateY(.7em) scale(.6)}}
+.cap{min-height:3.4em;font-size:15px;color:var(--sub);line-height:1.7;margin-bottom:12px}
+.asks{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+.ask{font-family:inherit;font-weight:700;font-size:14px;border:2.5px solid var(--red);background:#fff;color:var(--red);padding:6px 16px;border-radius:999px;cursor:pointer;transition:all .25s}
+.ask:hover{transform:translateY(-2px)}
+.ask[aria-pressed="true"]{background:var(--red);color:#fff;box-shadow:0 5px 0 var(--red2);transform:translateY(-2px)}
+.ask:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.q{font-size:13px;color:var(--sub);margin-bottom:8px;font-weight:700}
+.hours{display:flex;flex-wrap:wrap;gap:4px 14px;margin:14px 0 16px;font-size:13.5px}
+.hours span{position:relative;padding-left:16px}
+.hours span::before{content:"";position:absolute;left:0;top:.55em;width:9px;height:9px;border-radius:50%;background:var(--red)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 28px;background:var(--red);color:#fff;text-decoration:none;font-weight:900;font-size:15.5px;letter-spacing:.06em;border-radius:999px;box-shadow:0 6px 0 var(--red2);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(3px);box-shadow:0 3px 0 var(--red2)}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+.btn::after{content:"→"}
+.tel{display:inline-block;margin-left:12px;font-size:13.5px;color:var(--sub);font-weight:700}
+.tel a{text-decoration:none;border-bottom:2px solid var(--yellow)}
+
+/* 写真のお皿 */
+.dish{position:relative;width:min(100%,400px);aspect-ratio:1;margin:0 auto}
+.dish .rim{position:absolute;inset:0;border-radius:50%;background:#fff;box-shadow:0 14px 30px rgba(70,10,10,.3)}
+.dish .photo{position:absolute;inset:4%;border-radius:50%;overflow:hidden;background:#f3dfc4}
+.dish img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.12) rotate(-4deg);transition:opacity .8s,transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.dish img.on{opacity:1;transform:none}
+.dish .lbl{position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);background:var(--yellow);color:var(--ink);font-weight:900;font-size:14px;padding:3px 18px;border-radius:999px;white-space:nowrap;box-shadow:0 4px 0 rgba(0,0,0,.15);z-index:3}
+.dish .ai{position:absolute;right:2%;top:6%;z-index:3;font-size:11px;background:rgba(255,255,255,.9);padding:1px 10px;border-radius:999px;color:#6a5258;transform:rotate(6deg)}
+.stk{position:absolute;z-index:3;font-weight:900;font-size:13px;background:#fff;color:var(--red);border:2.5px solid var(--red);border-radius:999px;padding:1px 12px;animation:bob 4.5s ease-in-out infinite}
+.stk.s1{left:-5%;top:12%;transform:rotate(-8deg)}
+.stk.s2{right:-6%;bottom:22%;animation-delay:-2s;transform:rotate(7deg)}
+@keyframes bob{50%{translate:0 -7px}}
+
+/* てんとう虫（画面の縁を歩く。タップで飛ぶ） */
+.bug{position:absolute;z-index:6;left:0;top:0;width:44px;height:44px;cursor:pointer;offset-rotate:auto 90deg;filter:drop-shadow(0 4px 3px rgba(60,10,10,.35))}
+.bug svg{width:100%;height:100%;animation:wob .5s ease-in-out infinite}
+@keyframes wob{50%{transform:rotate(7deg) scale(1.04)}}
+.bug.fly{transition:transform 1.4s cubic-bezier(.5,0,.9,.4),opacity 1.4s;transform:translate(60vw,-70vh) scale(.4) rotate(40deg);opacity:0}
+.hint{position:absolute;z-index:7;left:50%;top:10px;transform:translateX(-50%);font-size:12px;font-weight:700;color:var(--ink);background:#fff;padding:2px 14px;border-radius:999px;box-shadow:0 3px 8px rgba(0,0,0,.2);transition:opacity .6s;white-space:nowrap}
+.hint.gone{opacity:0}
+
+@media(max-width:760px){
+  .hero{padding:40px 10px 12px;align-items:start}
+  .plate{grid-template-columns:1fr;border-radius:30px;padding:12px 16px 16px;gap:6px;box-shadow:0 0 0 6px #fff,0 18px 36px rgba(70,10,10,.4)}
+  .dish{order:-1;width:min(48vw,190px)}
+  .dish .lbl{font-size:12px;padding:2px 14px}
+  .logo{margin:6px 0 2px}.logo .lb{width:34px;height:34px}.logo b{font-size:27px}
+  .logo small{font-size:9.5px;margin-top:2px}
+  h1{font-size:18px;margin:2px 0 4px;line-height:1.5}
+  .q{display:none}
+  .asks{gap:6px;margin-bottom:4px}
+  .ask{font-size:13px;padding:4px 13px}
+  .cap{font-size:13px;min-height:2.7em;margin-bottom:4px;line-height:1.6}
+  .hours{margin:4px 0 8px;font-size:11.5px;gap:2px 10px}
+  .btn{width:100%;min-height:46px;font-size:15px}
+  .tel{display:none}
+  .hint{top:10px}
+  .stk{font-size:11.5px;padding:0 9px}
+  .stk.s1{left:-2%}.stk.s2{right:-2%}
+}
+@media(max-width:760px) and (max-height:640px){.hours{display:none}.dish{width:min(40vw,150px)}}
+footer{padding:14px 20px 26px;text-align:center;font-size:12px;color:var(--sub);background:var(--cream)}
+@media(prefers-reduced-motion:reduce){.hero{animation:none}.stk{animation:none}.bug svg{animation:none}}
+</style>
+</head>
+<body>
+<div class="demo">これはカフェ コクシネル様向けに作ったデモ（トップページのみ・非公開の見本）です。内容はInstagramの公開情報をもとにしています。</div>
+<main>
+<section class="hero" id="hero" aria-label="カフェ コクシネル トップ">
+  <p class="hint" id="hint">てんとう虫を、つついてみて</p>
+  <div class="bug" id="bug" role="button" tabindex="0" aria-label="てんとう虫（タップで飛んでいきます）">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="38" rx="22" ry="22" fill="#d93a35"/><path d="M32 16v44" stroke="#2b1a18" stroke-width="3"/><circle cx="32" cy="14" r="10" fill="#2b1a18"/><circle cx="22" cy="31" r="4.5" fill="#2b1a18"/><circle cx="42" cy="31" r="4.5" fill="#2b1a18"/><circle cx="21" cy="46" r="4" fill="#2b1a18"/><circle cx="43" cy="46" r="4" fill="#2b1a18"/><circle cx="28" cy="11" r="2.4" fill="#fff"/><circle cx="36" cy="11" r="2.4" fill="#fff"/><path d="M26 6q-5-6-9-5M38 6q5-6 9-5" stroke="#2b1a18" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>
+  </div>
+
+  <div class="plate">
+    <div class="copy">
+      <div class="logo">
+        <svg class="lb" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#fff" stroke="#2b1a18" stroke-width="3"/><ellipse cx="32" cy="38" rx="17" ry="17" fill="#d93a35"/><path d="M32 22v33" stroke="#2b1a18" stroke-width="2.4"/><circle cx="32" cy="20" r="8" fill="#2b1a18"/><circle cx="25" cy="34" r="3.4" fill="#2b1a18"/><circle cx="39" cy="34" r="3.4" fill="#2b1a18"/><circle cx="25" cy="45" r="3" fill="#2b1a18"/><circle cx="39" cy="45" r="3" fill="#2b1a18"/></svg>
+        <div><b>cafe coccinelle</b><small>カフェ コクシネル　｜　宝塚・中山観音</small></div>
+      </div>
+      <h1 id="h1" aria-label="3世代の「美味しい！」が、ひとつの席で。"><span>3世代の</span><span class="em">「美味しい！」</span><span>が、</span><br><span>ひとつの席で。</span></h1>
+      <p class="q">今日は、どんな気分？</p>
+      <div class="asks" role="group" aria-label="気分を選ぶ">
+        <button class="ask" data-i="0" aria-pressed="true">お昼ごはん</button>
+        <button class="ask" data-i="1" aria-pressed="false">おやつ</button>
+        <button class="ask" data-i="2" aria-pressed="false">持ち帰り</button>
+      </div>
+      <p class="cap" id="cap" aria-live="polite">本格洋食と、選べる8種のおばんざい。</p>
+      <div class="hours"><span>平日 9:30–20:30</span><span>土・祝 11:00–18:00</span><span>日曜定休</span></div>
+      <a class="btn" id="cta" href="https://www.instagram.com/cafe.coccinelle/" target="_blank" rel="noopener">DMで予約・相談する</a><span class="tel"><a href="tel:0797628130">0797-62-8130</a></span>
+    </div>
+    <div class="dish" id="dish">
+      <div class="rim"></div>
+      <div class="photo"><img class="on" src="assets/c1.jpg" alt=""><img src="assets/c2.jpg" alt=""><img src="assets/c3.jpg" alt=""></div>
+      <span class="lbl" id="lbl">洋食 × おばんざい</span>
+      <span class="ai">※ イメージ（AI生成）</span>
+      <span class="stk s1">3世代で</span><span class="stk s2">阪急中山観音駅すぐ</span>
+    </div>
+  </div>
+</section>
+</main>
+<footer>写真はAI生成のイメージです。お店の実際のお料理の写真ではありません。メニュー・料金は、確認のうえ掲載します。</footer>
+<script>
+(function(){
+  var root=document.documentElement,hero=document.getElementById("hero");
+  var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var visible=document.visibilityState==="visible";
+  /* 見出し：ぽんぽんと弾むように現れる */
+  if(visible&&!reduce){root.classList.add("anim");var n=0;[].slice.call(document.querySelectorAll("#h1 span")).forEach(function(sp){var t=sp.textContent;sp.textContent="";t.split("").forEach(function(c){var s=document.createElement("span");s.className="ch";s.style.setProperty("--n",n++);s.textContent=c;sp.appendChild(s)})})}
+
+  /* 気分を選ぶ：お皿の写真と言葉が変わる。放っておくと、自動で順にめぐる */
+  var T=[
+    {cap:"本格洋食と、選べる8種のおばんざい。",lbl:"洋食 × おばんざい"},
+    {cap:"極上アサイー、かき氷、ケーキ。季節の甘いものも。",lbl:"アサイー・かき氷"},
+    {cap:"お弁当は、ご注文を受けてから作ります。",lbl:"お弁当・持ち帰り"}];
+  var imgs=[].slice.call(document.querySelectorAll("#dish img")),btns=[].slice.call(document.querySelectorAll(".ask")),cap=document.getElementById("cap"),lbl=document.getElementById("lbl"),cur=0,touched=false;
+  function pick(i){cur=i;imgs.forEach(function(m,k){m.classList.toggle("on",k===i)});btns.forEach(function(b,k){b.setAttribute("aria-pressed",k===i?"true":"false")});cap.textContent=T[i].cap;lbl.textContent=T[i].lbl}
+  btns.forEach(function(b){b.addEventListener("click",function(){touched=true;pick(+b.getAttribute("data-i"))})});
+  if(!reduce)setInterval(function(){if(!touched)pick((cur+1)%3)},5200);
+
+  /* てんとう虫：お皿のまわりを歩く。タップすると飛んでいく */
+  var bug=document.getElementById("bug"),hint=document.getElementById("hint");
+  function path(){
+    var W=hero.clientWidth,H=hero.clientHeight,m=14,r=60;
+    bug.style.offsetPath='path("M '+(m+r)+' '+m+' H '+(W-m-r)+' Q '+(W-m)+' '+m+' '+(W-m)+' '+(m+r)+' V '+(H-m-r)+' Q '+(W-m)+' '+(H-m)+' '+(W-m-r)+' '+(H-m)+' H '+(m+r)+' Q '+m+' '+(H-m)+' '+m+' '+(H-m-r)+' V '+(m+r)+' Q '+m+' '+m+' '+(m+r)+' '+m+' Z")';
+  }
+  path();window.addEventListener("resize",path);
+  var run=function(){
+    if(reduce){bug.style.offsetDistance="6%";return}
+    var t0=performance.now(),per=34000,fly=false;
+    var tick=function(now){if(fly)return;bug.style.offsetDistance=(((now-t0)%per)/per*100)+"%";requestAnimationFrame(tick)};
+    requestAnimationFrame(tick);
+    var go=function(){if(fly)return;fly=true;hint.classList.add("gone");bug.classList.add("fly");setTimeout(function(){bug.style.display="none"},1500)};
+    bug.addEventListener("click",go);
+    bug.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();go()}});
+  };
+  run();
+  setTimeout(function(){hint.classList.add("gone")},12000);
+})();
+</script>
+</body>
+</html>
